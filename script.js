@@ -27,6 +27,7 @@ function showSlides(n) {
 }
 
 // Javascript object for clothes list:
+let content = document.getElementsByClassName("content");
 let name = document.getElementsByClassName("name");
 let brand = document.getElementsByClassName("brand");
 let price = document.getElementsByClassName("price");
@@ -40,20 +41,13 @@ let clothes = [
     { name: "Designer Shirt", brand: "Penshoppe", price: "60$", image: "shirt_6.jpg" }
 ];
 
-
-
 function loadProductInfo() {
     for (let index = 0; index < clothes.length; index++) {
         name[index].innerHTML = "Name: " + clothes[index].name;
         brand[index].innerHTML = "Brand: " + clothes[index].brand;
         price[index].innerHTML = "Price: " + clothes[index].price;
+        image[index].setAttribute("src", clothes[index].image);
     }
 }
 
-function addImage() {
-    for (let index = 0; index < clothes.length; index++) {
-
-
-    }
-}
 loadProductInfo();

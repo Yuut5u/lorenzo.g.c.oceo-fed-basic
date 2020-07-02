@@ -35,7 +35,7 @@ a{
     padding: 10px;
 }
 
-.cart a:hover{
+.cart a:hover, .add-cart:hover{
     color: #ccc;
 }
 
@@ -207,8 +207,10 @@ img {vertical-align: middle;}
 
 .container{
     display: flex;
-    justify-items: space-evenly;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     padding-top: 30px;
+    
 }
 
 .container div{
@@ -217,7 +219,7 @@ img {vertical-align: middle;}
 }
 
 .content{
-    flex-basis: 25%;
+    text-align: center;
 }
 
 .anim8{
@@ -226,17 +228,6 @@ img {vertical-align: middle;}
 .anim8:hover{
     color: 	#7f7e7e;
 }
-
-/* card styling */
-/* .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-  }
-  
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-   */
 
 /* footer styling */
 /* footer{
