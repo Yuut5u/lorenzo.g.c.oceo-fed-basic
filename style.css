@@ -235,6 +235,20 @@ img {vertical-align: middle;}
 }
 
 /* cart section styling */
+.cartContainer{
+    max-width: 650px;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.cartContainer .fa{
+    font-size: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
 .cart-header{
     width: 100%;
     max-width: 650px;
@@ -276,6 +290,21 @@ img {vertical-align: middle;}
     align-items: center;
     padding: 10px 0;
     border-bottom: 1px solid lightgrey;
+}
+
+.basketTotalContainer{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding 100px 0;
+}
+
+.basketTotalTitle{
+    width: 30%;
+}
+
+.basketTotal{
+    width: 10%;
 }
 
 /* footer styling */

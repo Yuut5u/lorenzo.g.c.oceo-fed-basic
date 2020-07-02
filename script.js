@@ -122,16 +122,32 @@ function displayCart() {
     let cartItems = localStorage.getItem("clothesInCart");
     cartItems = JSON.parse(cartItems);
     let productContainer = document.querySelector(".products");
+    let cartCost = localStorage.getItem("totalCost");
     if (cartItems && modal) {
         productContainer.innerHTML = '';
         Object.values(cartItems).map(item => {
             productContainer.innerHTML += `
             <div class ="product">
-                <h1>halu</h1>
+                <i class="fa fa-times"></i>  
                 <img src="${item.image}">
                 <span>${item.name}</span>
-            </div>`
+            </div>
+            <div class="product-price">$${item.price},00</div>
+            <div class="product-quantity">
+            <i class="fa fa-minus"></i>
+            <span>${item.inCart}</span>
+            <i class="fa fa-plus"></i>
+            <div class = "total">
+                $${item.inCart * item.price},00
+            `;
         });
+        productContainer.innerHTML += `
+            <div class="basketTotalContainer">
+                <h4 class ="basketTotalTitle">
+                    Basket Total
+                </h4>
+                <h4 class = "basketTotal">
+                    $${cartCost},00`
     }
 }
 
