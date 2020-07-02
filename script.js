@@ -106,8 +106,8 @@ function setItems(clothes) {
 function totalCost(clothes) {
     // console.log("The product price is", clothes.price);
     let cartCost = localStorage.getItem("totalCost");
-    console.log("My cartCost is", cartCost);
-    console.log(typeof cartCost);
+    // console.log("My cartCost is", cartCost);
+    // console.log(typeof cartCost);
 
     if (cartCost != null) {
         cartCost = parseInt(cartCost);
@@ -121,9 +121,17 @@ function totalCost(clothes) {
 function displayCart() {
     let cartItems = localStorage.getItem("clothesInCart");
     cartItems = JSON.parse(cartItems);
-    let productContainer = document.querySelector(".cart-container");
-    if (cartItems && cartContainer) {
-        console.log("running");
+    let productContainer = document.querySelector(".products");
+    if (cartItems && modal) {
+        productContainer.innerHTML = '';
+        Object.values(cartItems).map(item => {
+            productContainer.innerHTML += `
+            <div class ="product">
+                <h1>halu</h1>
+                <img src="${item.image}">
+                <span>${item.name}</span>
+            </div>`
+        });
     }
 }
 
