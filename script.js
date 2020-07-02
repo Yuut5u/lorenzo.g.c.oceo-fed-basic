@@ -1,3 +1,14 @@
+// Javascript object for clothes list:
+let clothes = [
+    { name: "Basic White Tees", brand: "Essentials by Bench", price: "50$" },
+    { name: "Basic Black Tees", brand: "Essentials by Bench", price: "50$" },
+    { name: "White Long Sleeve", brand: "Zalora", price: "100$" },
+    { name: "Checkered Long Sleeve", brand: "Zalora", price: "150$" },
+    { name: "Printed Shirt", brand: "Penshoppe", price: "60$" },
+    { name: "Designer Shirt", brand: "Penshoppe", price: "60$" }
+];
+
+
 // Carousel script 
 var slideIndex = 1;
 showSlides(slideIndex);
