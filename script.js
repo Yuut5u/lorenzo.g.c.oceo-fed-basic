@@ -1,14 +1,3 @@
-// Javascript object for clothes list:
-let clothes = [
-    { name: "Basic White Tees", brand: "Essentials by Bench", price: "50$" },
-    { name: "Basic Black Tees", brand: "Essentials by Bench", price: "50$" },
-    { name: "White Long Sleeve", brand: "Zalora", price: "100$" },
-    { name: "Checkered Long Sleeve", brand: "Zalora", price: "150$" },
-    { name: "Printed Shirt", brand: "Penshoppe", price: "60$" },
-    { name: "Designer Shirt", brand: "Penshoppe", price: "60$" }
-];
-
-
 // Carousel script 
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -36,3 +25,35 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
+
+// Javascript object for clothes list:
+let name = document.getElementsByClassName("name");
+let brand = document.getElementsByClassName("brand");
+let price = document.getElementsByClassName("price");
+let image = document.getElementsByClassName("image");
+let clothes = [
+    { name: "Basic White Tees", brand: "Essentials by Bench", price: "50$", image: "shirt_1.jpg" },
+    { name: "Basic Black Tees", brand: "Essentials by Bench", price: "50$", image: "shirt_2.jpg" },
+    { name: "White Long Sleeve", brand: "Zalora", price: "100$", image: "shirt_3.jpg" },
+    { name: "Checkered Long Sleeve", brand: "Zalora", price: "150$", image: "shirt_4.jpg" },
+    { name: "Printed Shirt", brand: "Penshoppe", price: "60$", image: "shirt_5.jpg" },
+    { name: "Designer Shirt", brand: "Penshoppe", price: "60$", image: "shirt_6.jpg" }
+];
+
+
+
+function loadProductInfo() {
+    for (let index = 0; index < clothes.length; index++) {
+        name[index].innerHTML = "Name: " + clothes[index].name;
+        brand[index].innerHTML = "Brand: " + clothes[index].brand;
+        price[index].innerHTML = "Price: " + clothes[index].price;
+    }
+}
+
+function addImage() {
+    for (let index = 0; index < clothes.length; index++) {
+
+
+    }
+}
+loadProductInfo();
