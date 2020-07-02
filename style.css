@@ -35,6 +35,10 @@ a{
     padding: 10px;
 }
 
+.cart span{
+    padding-left: 5px;
+}
+
 .cart a:hover, .add-cart:hover{
     color: #ccc;
 }
@@ -64,6 +68,7 @@ a{
 .active .cart{
     display: flex;
 }
+
 
 
 /* tablet navBar  */
@@ -198,14 +203,14 @@ img {vertical-align: middle;}
 }
 
 /* flex containers */
-@media(max-width: 768px){
+@media only screen and (max-width: 768px){
     .container{
        display: flex;
        flex-direction: column;
     }
    }
 
-.container{
+.container, .cartContainer{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -229,10 +234,95 @@ img {vertical-align: middle;}
     color: 	#7f7e7e;
 }
 
+/* cart section styling */
+.cart-header{
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 4px solid lightgrey;
+    margin: 0 auto;
+}
+
+.product-title{
+    width: 45%;
+}
+
+.product-price{
+    width: 15%;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+}
+
+.product-quantity{
+    width: 30%;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+}
+
+.product-total{
+    width: 10%;
+    border-bottom: 1px solid lightgrey;
+    display:flex;
+    align-items: center;
+}
+
+.product{
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid lightgrey;
+}
+
 /* footer styling */
 /* footer{
     background: whitesmoke;
     display: flex;
     flex-wrap: nowrap;
 } */
+
+/* modal section attempt#1 */
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
 

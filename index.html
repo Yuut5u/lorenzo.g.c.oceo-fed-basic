@@ -15,9 +15,20 @@
     <nav>
         <ul class="navBar">
             <li class="logo"> <a href="#landing">LGCO</a></li>
-            <li class="cart"> <a href="#shopping"><i class="fa fa-shopping-cart"></i></a></li>
+            <li class="cart" id="myBtn"> <a href="#shopping"><i class="fa fa-shopping-cart"></i><span>0</span></a></li>
         </ul>
     </nav>
+
+    <!-- modal section -->
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+        </div>
+
+    </div>
 
     <!-- carousel section DONE -->
     <div class="slideshow-container">
@@ -98,6 +109,19 @@
             <a href="#" class="add-cart cart1">Add to cart<i class="fa fa-cart-plus"></i></a>
         </div>
     </main>
+
+    <!-- Modal -->
+    <section class="cartContainer">
+        <div class="cart-header">
+            <h5 class="product-title">Product</h5>
+            <h5 class="product-price">Price</h5>
+            <h5 class="product-quantity">Quantity</h5>
+            <h5 class="product-total">Total</h5>
+        </div>
+        <div class="products">
+
+        </div>
+    </section>
 
 
     <!-- 
