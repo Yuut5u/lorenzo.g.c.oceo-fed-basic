@@ -1,0 +1,153 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    background: linear-gradient(327deg, rgba(214,243,255,1) 42%, rgba(253,220,239,1) 78%, rgba(243,255,214,1) 95%);
+
+}
+
+nav{
+    background:#f3ffd6;
+    padding: 0 15px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.navBar{
+    list-style: none;   
+}
+
+.logo{
+    font-size: 20px;
+    padding: 7.5px 10px 7.5px 0;
+}
+
+.item{
+    padding: 10px;
+}
+
+.item a:hover{
+    color: #ccc;
+}
+
+/* mobile-first navigation */
+.navBar{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navBar li a{
+    display: flex;
+    padding: 15px 5px;
+}
+
+.item{
+    order: 1;
+    width: 100%;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.active .item{
+    display: flex;
+}
+
+
+/* tablet navBar  */
+@media all and (min-width: 700px){
+    .navBar{
+        justify-content: center;
+    }
+    .logo{
+        flex: 1;
+    }
+}
+
+/* desktop navBar */
+@media all and (min-width: 960px){
+    .navBar{
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        background: none;
+    }
+
+    .logo{
+        order: 0;
+    }
+    .item{
+        order: 1;
+        position: relative;
+        display: flex;
+        width: auto;
+    }
+
+}
+
+/* all the follows */
+.container{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-auto-rows: auto;
+    
+}
+
+.grid{
+    border: 2px red solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-wide{
+    grid-column: span 4 / auto;
+}
+
+.item-half{
+    grid-column: span 2 / auto;
+}
+
+/* landing config */
+.landing{
+    height: 100vh;
+   
+    text-align: center;
+}
+
+.landing h1{
+    font-size: 5em;
+}
+
+.landing h2{
+    font-size: 2em;
+}
+
+.landing h3{
+    font-size: 1.5em;
+}
+
+.anim8{
+    transition: 0.3s;
+}
+.anim8:hover{
+    color: 	#7f7e7e;
+}
+
+/* experience config */
+/* .experience{
+    
+} */
+
