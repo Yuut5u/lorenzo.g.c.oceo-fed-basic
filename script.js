@@ -50,9 +50,6 @@ function loadProductInfo() {
         <p class="price">${clothes[index].price}</p>
         <a href="#" class="add-cart cart1">Add to cart<i class="fa fa-cart-plus"></i></a>`;
 
-        // brand[index].innerHTML = "Brand: " + clothes[index].brand;
-        // price[index].innerHTML = "Price: " + clothes[index].price + "$";
-        // image[index].setAttribute("src", clothes[index].image);
     }
 }
 
