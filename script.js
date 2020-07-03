@@ -51,9 +51,21 @@ function appendDivs() {
         <p class="brand">${clothes[index].brand}</p>
         <p class="price">${clothes[index].price}</p>
         <a href="#" class="add-cart cart1">Add to cart<i class="fa fa-cart-plus"></i></a>
+     
         </div>`;
+        console.log("The number of cart is", document.querySelectorAll(".add-cart"));
     }
 
+    let carts = document.querySelectorAll(".add-cart");
+
+    for (let index = 0; index < carts.length; index++) {
+        carts[index].addEventListener("click", () => {
+            cartNumbers(clothes[index]);
+            totalCost(clothes[index]);
+            location.reload();
+        })
+
+    }
 }
 
 let carts = document.querySelectorAll(".add-cart");
