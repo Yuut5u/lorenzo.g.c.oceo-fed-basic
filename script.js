@@ -130,10 +130,10 @@ function displayCart() {
             <div class ="product">
                 <i class="fa fa-times"></i>  
                 <img src="${item.image}">
-                <span>${item.name}</span>
+                <span>Name: ${item.name}</span>
             </div>
-            <div class="product-price">$${item.price},00</div>
-            <div class="product-quantity">
+            <div class="product-price">Price: $${item.price},00</div>
+            <div class="product-quantity">Quanitity:
             <i class="fa fa-minus"></i>
             <span>${item.inCart}</span>
             <i class="fa fa-plus"></i>

@@ -218,6 +218,9 @@ img {vertical-align: middle;}
     
 }
 
+img{
+    width: 20rem;
+}
 .container div{
     border: 2px #ccc solid;
     margin: 10px;
@@ -290,6 +293,10 @@ img {vertical-align: middle;}
     align-items: center;
     padding: 10px 0;
     border-bottom: 1px solid lightgrey;
+}
+
+.product img{
+    width: 50%;
 }
 
 .basketTotalContainer{
