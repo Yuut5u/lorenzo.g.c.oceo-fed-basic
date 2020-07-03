@@ -28,6 +28,7 @@ function showSlides(n) {
 
 // Javascript object for clothes list:
 let content = document.getElementsByClassName("content");
+let mainContainer = document.getElementById("mainContainer");
 let name = document.getElementsByClassName("name");
 let brand = document.getElementsByClassName("brand");
 let price = document.getElementsByClassName("price");
@@ -42,16 +43,31 @@ let clothes = [
 ];
 
 // logic for loading product details
-function loadProductInfo() {
+function appendDivs() {
     for (let index = 0; index < clothes.length; index++) {
-        content[index].innerHTML = ` <img class="image" src="${clothes[index].image}" alt="This is a picture.">
+        mainContainer.innerHTML += ` <div class="content">
+        <img class="image" src="${clothes[index].image}" alt="This is a picture.">
         <h3 class="name">${clothes[index].name}</h3>
         <p class="brand">${clothes[index].brand}</p>
         <p class="price">${clothes[index].price}</p>
-        <a href="#" class="add-cart cart1">Add to cart<i class="fa fa-cart-plus"></i></a>`;
-
+        <a href="#">Add to cart<i class="fa fa-cart-plus"></i></a>
+        </div>`;
     }
+
 }
+
+
+
+// function loadProductInfo() {
+//     for (let index = 0; index < clothes.length; index++) {
+//         content[index].innerHTML = ` <img class="image" src="${clothes[index].image}" alt="This is a picture.">
+//         <h3 class="name">${clothes[index].name}</h3>
+//         <p class="brand">${clothes[index].brand}</p>
+//         <p class="price">${clothes[index].price}</p>
+//         <a href="#" class="add-cart cart1">Add to cart<i class="fa fa-cart-plus"></i></a>`;
+
+//     }
+// }
 
 // logic for add to cart functionality
 let carts = document.querySelectorAll(".add-cart");
@@ -182,6 +198,6 @@ window.onclick = function (event) {
 }
 
 
-loadProductInfo();
+appendDivs();
 onLoadCartNumbers();
 displayCart();
