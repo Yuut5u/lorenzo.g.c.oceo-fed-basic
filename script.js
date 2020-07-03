@@ -58,6 +58,7 @@ for (let index = 0; index < carts.length; index++) {
     carts[index].addEventListener("click", () => {
         cartNumbers(clothes[index]);
         totalCost(clothes[index]);
+        location.reload();
     })
 
 }
@@ -181,4 +182,4 @@ window.onclick = function (event) {
 
 loadProductInfo();
 onLoadCartNumbers();
-displayCart()
+displayCart();
